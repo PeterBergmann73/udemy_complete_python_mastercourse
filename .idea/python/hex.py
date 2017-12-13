@@ -11,7 +11,6 @@
 # print(0b101010)
 
 power_lower_bound = 0
-
 power_upper_bound = 15
 
 powers = []
@@ -23,13 +22,13 @@ for power in power_range:
 
 print(powers)
 
-lower_bound = 2 ** power_lower_bound
+lower_bound = 2 ** power_lower_bound - 1
 upper_bound = 2 ** (power_upper_bound + 1) - 1
 
 num = int(input("Please, enter number between {} and {}: ".format(lower_bound, upper_bound)))
 
 while num < lower_bound or num > upper_bound:
-    num = int(print("Number is outside of the bounds, please, enter another number: "))
+    num = int(input("Number is outside of the bounds, please, enter another number: "))
 
 remainer = num
 binary = []
@@ -40,7 +39,16 @@ for power in powers:
 
 print("Number {} in binary format is :".format(num))
 
-for val in binary:
-    print(val, end="")
+printing = False
+
+iter0 = iter(binary)
+
+binary_length = len(binary)
+
+for i in range(binary_length):
+    val = binary[i]
+    if val != 0 or printing or i == binary_length - 1:
+        printing = True
+        print(val, end="")
 
 
