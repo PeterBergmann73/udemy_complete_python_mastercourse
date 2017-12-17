@@ -1,0 +1,1 @@
+print("adelaida".strip('a'))
