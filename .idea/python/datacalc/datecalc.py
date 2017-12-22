@@ -10,7 +10,17 @@
 # print(time.time())
 
 import time
-from time import time as my_timer
+# from time import time as my_timer
+
+# this is the best option
+# from time import perf_counter as my_timer
+
+# monotonic time
+# from time import monotonic as my_timer
+
+#time spend by CPU
+from time import process_time as my_timer
+
 import random
 
 input("Press enter to start")
